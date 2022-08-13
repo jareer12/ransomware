@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "P5uvUNf6RCEnaf2X4t+xBodWy1jLJ9k1qSfVpblELA4ZRub3HMN/N4bSFC9sE+5PKUpoNt1a0rjYOWEdi1pzug==",
+  "success": true,
+  "projectFilePath": "/home/jub0t/Downloads/Virus/src/decryptor/decryptor.csproj",
+  "expectedPackageFiles": [
+    "/home/jub0t/.nuget/packages/microsoft.netcore.app.runtime.win-x64/6.0.8/microsoft.netcore.app.runtime.win-x64.6.0.8.nupkg.sha512",
+    "/home/jub0t/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/6.0.8/microsoft.aspnetcore.app.runtime.win-x64.6.0.8.nupkg.sha512",
+    "/home/jub0t/.nuget/packages/microsoft.netcore.app.crossgen2.linux-x64/6.0.8/microsoft.netcore.app.crossgen2.linux-x64.6.0.8.nupkg.sha512",
+    "/home/jub0t/.nuget/packages/microsoft.netcore.app.host.win-x64/6.0.8/microsoft.netcore.app.host.win-x64.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

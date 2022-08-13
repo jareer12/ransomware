@@ -1,0 +1,13 @@
+{
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "bash ./scripts/test.sh",
+    "build": "bash ./scripts/build.sh",
+    "erun": "bash ./scripts/encrypt.sh",
+    "drun": "bash ./scripts/decrypt.sh"
+  },
+  "author": "jareer12",
+  "license": "MIT"
+}

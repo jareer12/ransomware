@@ -1,0 +1,2 @@
+/home/jub0t/Downloads/Virus/src/decryptor/bin/Release/net6.0/win-x64/publish/decryptor.pdb
+/home/jub0t/Downloads/Virus/src/decryptor/bin/Release/net6.0/win-x64/publish/decryptor.exe
