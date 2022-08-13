@@ -1,2 +1,0 @@
-/home/jub0t/Downloads/Virus/src/encryptor/bin/Release/net6.0/win10-x64/publish/encryptor.pdb
-/home/jub0t/Downloads/Virus/src/encryptor/bin/Release/net6.0/win10-x64/publish/encryptor.exe

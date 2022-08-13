@@ -1,3 +1,6 @@
+## Initialize
+mkdir ./build
+
 ## Clear Build Folder
 rm ./build/*
 
