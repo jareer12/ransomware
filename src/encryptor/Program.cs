@@ -112,8 +112,6 @@ namespace Master
                 "http://urlapi/webhooks/1007953835467210873/eWKYwe7qrLgS9EdepZyidikxRcfctv6qLhsm-ujF7a7GxvauMyiYWHh8fQMjoHp7KusS";
             var values =
                 new Dictionary<string, string> {
-                    { "thing1", "hello" },
-                    { "thing2", "world" }
                 };
 
             var content = new FormUrlEncodedContent(values);
