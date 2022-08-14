@@ -1,0 +1,9 @@
+{
+  "embeds": [
+    {
+      "title": "Target",
+      "description": "{Key}",
+      "color": 15258703
+    }
+  ]
+}

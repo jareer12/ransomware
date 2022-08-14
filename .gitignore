@@ -1,5 +1,7 @@
+./test
+./test/*
+
 ./build/*
 
 ./*/obj/*
 ./*/bin/*
-./test
