@@ -2,6 +2,7 @@
 ./test/*
 
 ./build/*
+./build
 
 ./*/obj/*
 ./*/bin/*
