@@ -111,8 +111,7 @@ namespace Master
 
         public static void SendWebhook(string description)
         {
-            var WebhookURL =
-                "https://discordapp.com/api/webhooks/1007953835467210873/eWKYwe7qrLgS9EdepZyidikxRcfctv6qLhsm-ujF7a7GxvauMyiYWHh8fQMjoHp7KusS";
+            var WebhookURL = "";
             var httpRequest = (HttpWebRequest) WebRequest.Create(WebhookURL);
             httpRequest.ContentType = "application/json";
             httpRequest.Method = "POST";
