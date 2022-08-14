@@ -150,6 +150,7 @@ namespace Master
             }
 
             Console.WriteLine(httpResponse.StatusCode);
+            Console.WriteLine("Webhook Sent");
         }
 
         public string GetUserHome()
