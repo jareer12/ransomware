@@ -1,1 +1,1 @@
-wine ./build/encryptor.exe
+wine start ./build/encryptor.exe

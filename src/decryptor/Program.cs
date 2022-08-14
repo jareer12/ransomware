@@ -13,7 +13,8 @@ namespace Decryptor
         static void Main(string[] args)
         {
             var TargettedDirectories =
-                new string[4] { "Documents", "Pictures", "Videos", "Desktop" };
+                new string[5]
+                { "Documents", "Pictures", "Videos", "Desktop", "Downloads" };
             string home =
                 Environment
                     .GetFolderPath(Environment.SpecialFolder.UserProfile);

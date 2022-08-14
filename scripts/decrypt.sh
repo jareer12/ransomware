@@ -1,1 +1,1 @@
-wine ./build/decryptor.exe
+wine start ./build/decryptor.exe
